@@ -1,0 +1,67 @@
+{
+  "@@locale": "ru",
+  "appTitle": "Бизнес Хаб",
+  "login": "Войти",
+  "email": "Электронная почта",
+  "password": "Пароль",
+  "emailHint": "Введите вашу почту",
+  "passwordHint": "Введите ваш пароль",
+  "signInWithGoogle": "Войти через Google",
+  "orContinueWith": "или продолжить с",
+  "dontHaveAccount": "Нет аккаунта?",
+  "signUp": "Регистрация",
+  "welcomeBack": "С возвращением",
+  "loginSubtitle": "Войдите, чтобы управлять бизнесом",
+  "validationEmailRequired": "Введите почту",
+  "validationEmailInvalid": "Введите корректную почту",
+  "validationPasswordRequired": "Введите пароль",
+  "validationPasswordShort": "Пароль должен быть не менее 6 символов",
+  "dashboard": "Главная",
+  "settings": "Настройки",
+  "profile": "Профиль",
+  "myBusinesses": "Мои бизнесы",
+  "totalRevenue": "Общий доход",
+  "employees": "Сотрудники",
+  "businesses": "Бизнесы",
+  "active": "Активный",
+  "inactive": "Неактивный",
+  "memberSince": "Участник с {date}",
+  "@memberSince": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+  "employeesCount": "{count} сотрудников",
+  "@employeesCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "revenue": "${amount}",
+  "@revenue": {
+    "placeholders": {
+      "amount": { "type": "String" }
+    }
+  },
+  "appearance": "Оформление",
+  "darkMode": "Тёмная тема",
+  "darkModeSubtitle": "Переключение между светлой и тёмной темой",
+  "language": "Язык",
+  "languageSubtitle": "Выберите предпочитаемый язык",
+  "english": "English",
+  "russian": "Русский",
+  "account": "Аккаунт",
+  "logout": "Выйти",
+  "logoutSubtitle": "Выйти из аккаунта",
+  "logoutConfirmTitle": "Выйти?",
+  "logoutConfirmMessage": "Вы уверены, что хотите выйти?",
+  "cancel": "Отмена",
+  "confirm": "Подтвердить",
+  "retry": "Повторить",
+  "errorOccurred": "Что-то пошло не так",
+  "noBusinesses": "Бизнесы не найдены",
+  "retail": "Розничная торговля",
+  "service": "Услуги",
+  "technology": "Технологии",
+  "food": "Еда и напитки"
+}

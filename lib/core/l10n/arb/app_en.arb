@@ -1,0 +1,67 @@
+{
+  "@@locale": "en",
+  "appTitle": "Business Hub",
+  "login": "Log In",
+  "email": "Email",
+  "password": "Password",
+  "emailHint": "Enter your email",
+  "passwordHint": "Enter your password",
+  "signInWithGoogle": "Sign in with Google",
+  "orContinueWith": "or continue with",
+  "dontHaveAccount": "Don't have an account?",
+  "signUp": "Sign Up",
+  "welcomeBack": "Welcome Back",
+  "loginSubtitle": "Sign in to continue managing your businesses",
+  "validationEmailRequired": "Email is required",
+  "validationEmailInvalid": "Enter a valid email",
+  "validationPasswordRequired": "Password is required",
+  "validationPasswordShort": "Password must be at least 6 characters",
+  "dashboard": "Dashboard",
+  "settings": "Settings",
+  "profile": "Profile",
+  "myBusinesses": "My Businesses",
+  "totalRevenue": "Total Revenue",
+  "employees": "Employees",
+  "businesses": "Businesses",
+  "active": "Active",
+  "inactive": "Inactive",
+  "memberSince": "Member since {date}",
+  "@memberSince": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+  "employeesCount": "{count} employees",
+  "@employeesCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "revenue": "${amount}",
+  "@revenue": {
+    "placeholders": {
+      "amount": { "type": "String" }
+    }
+  },
+  "appearance": "Appearance",
+  "darkMode": "Dark Mode",
+  "darkModeSubtitle": "Switch between light and dark theme",
+  "language": "Language",
+  "languageSubtitle": "Choose your preferred language",
+  "english": "English",
+  "russian": "Русский",
+  "account": "Account",
+  "logout": "Log Out",
+  "logoutSubtitle": "Sign out of your account",
+  "logoutConfirmTitle": "Log Out?",
+  "logoutConfirmMessage": "Are you sure you want to log out?",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "retry": "Retry",
+  "errorOccurred": "Something went wrong",
+  "noBusinesses": "No businesses found",
+  "retail": "Retail",
+  "service": "Service",
+  "technology": "Technology",
+  "food": "Food & Beverage"
+}
