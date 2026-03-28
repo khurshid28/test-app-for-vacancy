@@ -16,6 +16,7 @@ import 'package:test_app/features/home/domain/usecases/get_user_profile_usecase.
 import 'package:test_app/features/home/presentation/bloc/user_bloc.dart';
 import 'package:test_app/app/theme/theme_cubit.dart';
 import 'package:test_app/core/l10n/locale_cubit.dart';
+import 'package:test_app/core/network/connectivity_cubit.dart';
 
 final sl = GetIt.instance;
 
@@ -36,6 +37,9 @@ Future<void> initDependencies() async {
   );
   sl.registerLazySingleton<LocaleCubit>(
     () => LocaleCubit(sl<SharedPreferences>()),
+  );
+  sl.registerLazySingleton<ConnectivityCubit>(
+    () => ConnectivityCubit(),
   );
 
   // Auth

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:test_app/core/l10n/generated/app_localizations.dart';
 import 'package:test_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:test_app/features/auth/presentation/bloc/auth_event.dart';
 import 'package:test_app/features/auth/presentation/bloc/auth_state.dart';
@@ -30,7 +30,7 @@ class SocialLoginButtons extends StatelessWidget {
               'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg',
               width: 20,
               height: 20,
-              errorBuilder: (_, __, ___) => Text(
+              errorBuilder: (context, error, stackTrace) => Text(
                 'G',
                 style: TextStyle(
                   fontSize: 18,

@@ -63,5 +63,8 @@
   "retail": "Retail",
   "service": "Service",
   "technology": "Technology",
-  "food": "Food & Beverage"
+  "food": "Food & Beverage",
+  "noInternet": "No Internet Connection",
+  "noInternetSubtitle": "Please check your Wi-Fi or mobile data and try again",
+  "tryAgain": "Try Again"
 }
