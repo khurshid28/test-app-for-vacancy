@@ -50,25 +50,25 @@ void main() {
 
     group('CheckAuthStatus', () {
       blocTest<AuthBloc, AuthState>(
-        'emits [AuthAuthenticated] when token exists',
+        'emits [AuthLoading, AuthAuthenticated] when token exists',
         setUp: () {
           when(() => mockSecureStorage.hasToken())
               .thenAnswer((_) async => true);
         },
         build: buildBloc,
         act: (bloc) => bloc.add(const CheckAuthStatus()),
-        expect: () => [const AuthAuthenticated()],
+        expect: () => [const AuthLoading(), const AuthAuthenticated()],
       );
 
       blocTest<AuthBloc, AuthState>(
-        'emits [AuthUnauthenticated] when no token',
+        'emits [AuthLoading, AuthUnauthenticated] when no token',
         setUp: () {
           when(() => mockSecureStorage.hasToken())
               .thenAnswer((_) async => false);
         },
         build: buildBloc,
         act: (bloc) => bloc.add(const CheckAuthStatus()),
-        expect: () => [const AuthUnauthenticated()],
+        expect: () => [const AuthLoading(), const AuthUnauthenticated()],
       );
     });
 

@@ -1,4 +1,4 @@
-﻿# 📱 Test App for Vacancy
+# 📱 Test App for Vacancy
 
 A Flutter application built with **Clean Architecture**, featuring Authentication, Home Dashboard, and Settings — demonstrating best practices in state management, dependency injection, networking, and localization.
 
@@ -9,7 +9,7 @@ A Flutter application built with **Clean Architecture**, featuring Authenticatio
 - **Authentication** — Email/password login + Google Sign-In
 - **Home Dashboard** — User profile, stats cards, business list with shimmer loading
 - **Settings** — Theme switching (light/dark) and language selection
-- **Localization** — Multi-language support via `flutter_localizations` & `intl`
+- __Localization__ — Multi-language support via `flutter_localizations` & `intl`
 
 ---
 
@@ -17,7 +17,7 @@ A Flutter application built with **Clean Architecture**, featuring Authenticatio
 
 The project follows **Clean Architecture** with a feature-first folder structure:
 
-```
+```ini
 lib/
 ├── app/                    # App-level config
 │   ├── router/             # GoRouter navigation
@@ -63,20 +63,6 @@ lib/
 
 - Flutter SDK `^3.10.4`
 - Dart SDK (bundled with Flutter)
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/khurshid28/test-app-for-vacancy.git
-cd test-app-for-vacancy
-
-# Install dependencies
-flutter pub get
-
-# Run the app
-flutter run
-```
 
 ---
 

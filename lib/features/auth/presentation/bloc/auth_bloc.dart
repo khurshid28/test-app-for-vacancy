@@ -28,10 +28,15 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     CheckAuthStatus event,
     Emitter<AuthState> emit,
   ) async {
-    final hasToken = await secureStorage.hasToken();
-    if (hasToken) {
-      emit(const AuthAuthenticated());
-    } else {
+    emit(const AuthLoading());
+    try {
+      final hasToken = await secureStorage.hasToken();
+      if (hasToken) {
+        emit(const AuthAuthenticated());
+      } else {
+        emit(const AuthUnauthenticated());
+      }
+    } catch (_) {
       emit(const AuthUnauthenticated());
     }
   }

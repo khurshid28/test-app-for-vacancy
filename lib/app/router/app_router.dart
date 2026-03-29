@@ -5,6 +5,7 @@ import 'package:test_app/core/di/injection.dart';
 import 'package:test_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:test_app/features/auth/presentation/bloc/auth_state.dart';
 import 'package:test_app/features/auth/presentation/pages/login_page.dart';
+import 'package:test_app/features/auth/presentation/pages/splash_page.dart';
 import 'package:test_app/features/home/presentation/bloc/user_bloc.dart';
 import 'package:test_app/features/home/presentation/pages/home_page.dart';
 import 'package:test_app/features/home/presentation/pages/dashboard_page.dart';
@@ -16,19 +17,30 @@ class AppRouter {
   AppRouter({required this.authBloc});
 
   late final GoRouter router = GoRouter(
-    initialLocation: '/dashboard',
+    initialLocation: '/splash',
     debugLogDiagnostics: false,
     redirect: (context, state) {
       final authState = authBloc.state;
+      final isOnSplash = state.matchedLocation == '/splash';
+
+      // While loading (splash), stay on splash
+      if (authState is AuthInitial || authState is AuthLoading) {
+        return isOnSplash ? null : '/splash';
+      }
+
       final isAuthenticated = authState is AuthAuthenticated;
       final isOnLogin = state.matchedLocation == '/login';
 
       if (!isAuthenticated && !isOnLogin) return '/login';
-      if (isAuthenticated && isOnLogin) return '/dashboard';
+      if (isAuthenticated && (isOnLogin || isOnSplash)) return '/dashboard';
       return null;
     },
     refreshListenable: _GoRouterAuthRefresh(authBloc),
     routes: [
+      GoRoute(
+        path: '/splash',
+        builder: (context, state) => const SplashPage(),
+      ),
       GoRoute(
         path: '/login',
         builder: (context, state) => const LoginPage(),

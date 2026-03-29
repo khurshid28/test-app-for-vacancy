@@ -61,7 +61,7 @@ Future<void> initDependencies() async {
   sl.registerLazySingleton<LogoutUsecase>(
     () => LogoutUsecase(sl<AuthRepository>()),
   );
-  sl.registerFactory<AuthBloc>(
+  sl.registerLazySingleton<AuthBloc>(
     () => AuthBloc(
       loginUsecase: sl<LoginUsecase>(),
       googleSignInUsecase: sl<GoogleSignInUsecase>(),
